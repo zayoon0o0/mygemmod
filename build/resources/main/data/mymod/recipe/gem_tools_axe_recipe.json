@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aa",
+    "ab",
+    " b"
+  ],
+  "key": {
+    "a": "mymod:red_gem_item",
+    "b": "minecraft:stick"
+  },
+  "result": {
+    "id": "mymod:gem_tools_axe",
+    "count": 1
+  }
+}

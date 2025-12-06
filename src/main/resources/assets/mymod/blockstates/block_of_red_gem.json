@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mymod:block/block_of_red_gem"
+    }
+  }
+}

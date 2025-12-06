@@ -1,0 +1,17 @@
+{
+  "item.mymod.red_gem": "Red Gem Ore",
+  "item.mymod.red_gem_item": "Red Gem",
+  "item.mymod.gem_tools_pickaxe": "Gem Pickaxe",
+  "item.mymod.gem_tools_axe": "Gem Axe",
+  "item.mymod.gem_tools_sword": "Gem Sword",
+  "item.mymod.gem_tools_shovel": "Gem Shovel",
+  "item.mymod.gem_tools_hoe": "Gem Hoe",
+  "advancements.getting_gem.title": "Got A Gem!",
+  "advancements.getting_gem.descr": "Get A Gem In Minecraft",
+  "item.mymod.gem_armor_leggings": "Gem Armor Leggings",
+  "item.mymod.gem_armor_helmet": "Gem Armor Helmet",
+  "item.mymod.gem_armor_chestplate": "Gem Armor Chestplate",
+  "item.mymod.gem_armor_boots": "Gem Armor Boots",
+  "item.mymod.block_of_red_gem": "Block Of Red Gem",
+  "item_group.mymod.red_gem_tab": "Red Gem Tab"
+}

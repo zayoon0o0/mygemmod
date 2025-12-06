@@ -1,0 +1,49 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RedGemItem"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RedGemItem"
+      },
+      {
+        "value": "CUSTOM:RedGemItem"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:RedGemItem"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:GemArmor.boots"
+    },
+    "name": "boots_red_gem",
+    "namespace": "mod"
+  }
+}

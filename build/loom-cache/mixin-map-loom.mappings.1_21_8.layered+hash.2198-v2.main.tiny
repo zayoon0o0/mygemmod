@@ -1,0 +1,7 @@
+v1	named	intermediary
+FIELD	com/myapps/mymod/mixin/EquipmentLayerRendererMixin	Lnet/minecraft/client/resources/model/EquipmentAssetManager;	equipmentAssets	field_54179
+FIELD	com/myapps/mymod/mixin/EquipmentLayerRendererMixin	Ljava/util/function/Function;	layerTextureLookup	field_54180
+FIELD	com/myapps/mymod/mixin/EquipmentLayerRendererMixin	Ljava/util/function/Function;	trimSpriteLookup	field_54181
+FIELD	com/myapps/mymod/mixin/LivingEntityMixin	I	lastHurtByPlayerMemoryTime	field_6238
+METHOD	com/myapps/mymod/mixin/EquipmentLayerRendererMixin	(Lnet/minecraft/client/resources/model/EquipmentClientInfo$Layer;I)I	getColorForLayer	method_64076
+METHOD	com/myapps/mymod/mixin/LivingEntityMixin	()Z	isAlwaysExperienceDropper	method_6071

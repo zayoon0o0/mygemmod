@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
+    "up": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
+    "north": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
+    "east": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
+    "south": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
+    "west": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
+    "particle": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am"
+  },
+  "render_type": "solid"
+}

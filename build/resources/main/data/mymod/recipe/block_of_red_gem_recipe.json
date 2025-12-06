@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": "mymod:red_gem_item"
+  },
+  "result": {
+    "id": "mymod:block_of_red_gem",
+    "count": 1
+  }
+}
