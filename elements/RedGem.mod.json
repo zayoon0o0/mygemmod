@@ -152,6 +152,12 @@
       },
       {
         "value": "the_end"
+      },
+      {
+        "value": "end_highlands"
+      },
+      {
+        "value": "end_midlands"
       }
     ],
     "blocksToReplace": [
@@ -164,7 +170,7 @@
     ],
     "generationShape": "TRIANGLE",
     "frequencyPerChunks": 2,
-    "frequencyOnChunk": 7,
+    "frequencyOnChunk": 3,
     "minGenerateHeight": -500,
     "maxGenerateHeight": 800
   }

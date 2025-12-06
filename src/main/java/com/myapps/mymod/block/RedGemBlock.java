@@ -18,7 +18,8 @@ public class RedGemBlock extends Block {
 	}
 
 	public static final Predicate<BiomeSelectionContext> GENERATE_BIOMES = BiomeSelectors.includeByKey(ResourceKey.create(Registries.BIOME, ResourceLocation.parse("small_end_islands")),
-			ResourceKey.create(Registries.BIOME, ResourceLocation.parse("end_barrens")), ResourceKey.create(Registries.BIOME, ResourceLocation.parse("the_end")));
+			ResourceKey.create(Registries.BIOME, ResourceLocation.parse("end_barrens")), ResourceKey.create(Registries.BIOME, ResourceLocation.parse("the_end")), ResourceKey.create(Registries.BIOME, ResourceLocation.parse("end_highlands")),
+			ResourceKey.create(Registries.BIOME, ResourceLocation.parse("end_midlands")));
 
 	@Override
 	public int getLightBlock(BlockState state) {
