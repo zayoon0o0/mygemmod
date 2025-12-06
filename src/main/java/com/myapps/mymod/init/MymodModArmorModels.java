@@ -18,6 +18,7 @@ import java.util.Map;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectOpenHashMap;
 
 import com.myapps.mymod.client.renderer.item.GemArmorArmor;
+import com.myapps.mymod.client.renderer.item.AmythestArmorArmor;
 
 @Environment(EnvType.CLIENT)
 public class MymodModArmorModels {
@@ -56,5 +57,6 @@ public class MymodModArmorModels {
 
 	public static void clientLoad() {
 		GemArmorArmor.clientLoad();
+		AmythestArmorArmor.clientLoad();
 	}
 }

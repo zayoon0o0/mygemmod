@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": "minecraft:amethyst_shard"
+  },
+  "result": {
+    "id": "mymod:amythest_armor_chestplate",
+    "count": 1
+  }
+}

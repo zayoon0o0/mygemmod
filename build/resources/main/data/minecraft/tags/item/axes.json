@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mymod:gem_tools_axe"
+    "mymod:gem_tools_axe",
+    "mymod:amethyst_axe"
   ]
 }

@@ -13,5 +13,14 @@
   "item.mymod.gem_armor_chestplate": "Gem Armor Chestplate",
   "item.mymod.gem_armor_boots": "Gem Armor Boots",
   "item.mymod.block_of_red_gem": "Block Of Red Gem",
-  "item_group.mymod.red_gem_tab": "Red Gem Tab"
+  "item_group.mymod.red_gem_tab": "Red Gem Items",
+  "item.mymod.amythest_armor_helmet": "Amethyst Helmet",
+  "item.mymod.amythest_armor_chestplate": "Amethyst Chestplate",
+  "item.mymod.amythest_armor_boots": "Amethyst Boots",
+  "item.mymod.amythest_armor_leggings": "Amethyst Leggings",
+  "item.mymod.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.mymod.amethyst_axe": "Amethyst Axe",
+  "item.mymod.amethyst_sword": "Amethyst Sword",
+  "item.mymod.amethyst_shovel": "Amethyst Shovel",
+  "item.mymod.amethyst_hoe": "Amethyst Hoe"
 }

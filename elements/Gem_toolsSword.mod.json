@@ -5,7 +5,7 @@
     "toolType": "Sword",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "gem_tools_sword",
+    "texture": "gemsowrdother",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "guiTexture": "",

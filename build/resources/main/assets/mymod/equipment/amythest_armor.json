@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mymod:amythest_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mymod:amythest_armor"
+      }
+    ]
+  }
+}

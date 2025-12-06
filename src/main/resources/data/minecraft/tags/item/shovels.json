@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mymod:gem_tools_shovel"
+    "mymod:gem_tools_shovel",
+    "mymod:amethyst_shovel"
   ]
 }
