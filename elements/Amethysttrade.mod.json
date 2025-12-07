@@ -1,0 +1,33 @@
+{
+  "_fv": 79,
+  "_type": "villagertrade",
+  "definition": {
+    "tradeEntries": [
+      {
+        "villagerProfession": {
+          "value": "ARMORER"
+        },
+        "entries": [
+          {
+            "price1": {
+              "value": "Items.EMERALD"
+            },
+            "countPrice1": 1,
+            "price2": {
+              "value": ""
+            },
+            "countPrice2": 1,
+            "offer": {
+              "value": "Items.AMETHYST_SHARD"
+            },
+            "countOffer": 5,
+            "level": 2,
+            "maxTrades": 200,
+            "xp": 5,
+            "priceMultiplier": 0.005
+          }
+        ]
+      }
+    ]
+  }
+}
