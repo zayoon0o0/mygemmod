@@ -33,7 +33,7 @@
     }
   },
   "rewards": {
-    "experience": 100
+    "experience": 1000
   },
-  "parent": "minecraft:adventure/kill_a_mob"
+  "parent": "minecraft:story/enter_the_end"
 }

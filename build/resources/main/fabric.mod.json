@@ -1,17 +1,18 @@
 {
   "schemaVersion": 1,
   "id": "mymod",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "myMod",
   "description": "Adds an End ore called Red gem, also adds amethyst tools and armor!",
   "authors": [
     "Zayoon0o0"
   ],
   "contact": {
-    "homepage": "https://mcreator.net",
+    "homepage": "https://modrinth.com/mod/my-gem-mod/ ",
     "sources": ""
   },
   "license": "GNU General Public License version 3 (GPLv3)",
+  "icon": "logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [

@@ -145,17 +145,24 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "generateFeature": false,
-    "restrictionBiomes": [],
-    "blocksToReplace": [
+    "generateFeature": true,
+    "restrictionBiomes": [
       {
-        "value": "TAG:stone_ore_replaceables"
+        "value": "mushroom_fields"
       }
     ],
-    "generationShape": "UNIFORM",
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
+    "blocksToReplace": [
+      {
+        "value": "Blocks.DEEPSLATE"
+      },
+      {
+        "value": "Blocks.TUFF"
+      }
+    ],
+    "generationShape": "TRIANGLE",
+    "frequencyPerChunks": 1,
+    "frequencyOnChunk": 1,
+    "minGenerateHeight": -70,
     "maxGenerateHeight": 64
   }
 }

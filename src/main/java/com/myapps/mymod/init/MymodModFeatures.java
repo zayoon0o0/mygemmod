@@ -19,11 +19,13 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import java.util.function.Predicate;
 
 import com.myapps.mymod.block.RedGemBlock;
+import com.myapps.mymod.block.BlockOfRedGemBlock;
 import com.myapps.mymod.MymodMod;
 
 public class MymodModFeatures {
 	public static void load() {
 		register("red_gem", new OreFeature(OreConfiguration.CODEC), RedGemBlock.GENERATE_BIOMES, GenerationStep.Decoration.UNDERGROUND_ORES);
+		register("block_of_red_gem", new OreFeature(OreConfiguration.CODEC), BlockOfRedGemBlock.GENERATE_BIOMES, GenerationStep.Decoration.UNDERGROUND_ORES);
 	}
 
 	private static void register(String registryname, Feature feature, Predicate<BiomeSelectionContext> biomes, GenerationStep.Decoration stage) {

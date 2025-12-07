@@ -22,6 +22,7 @@ import java.lang.invoke.MethodType;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodHandle;
 
+import com.myapps.mymod.init.MymodModTrades;
 import com.myapps.mymod.init.MymodModTabs;
 import com.myapps.mymod.init.MymodModItems;
 import com.myapps.mymod.init.MymodModFeatures;
@@ -40,6 +41,7 @@ public class MymodMod implements ModInitializer {
 		MymodModFeatures.load();
 		MymodModBlocks.load();
 		MymodModItems.load();
+		MymodModTrades.registerTrades();
 		tick();
 		// Start of user code block mod init
 		// End of user code block mod init

@@ -19,10 +19,10 @@
       }
     ],
     "efficiency": 20.0,
-    "attackSpeed": 2.0,
-    "enchantability": 14,
-    "damageVsEntity": 6.0,
-    "usageCount": 44,
+    "attackSpeed": 1.0,
+    "enchantability": 30,
+    "damageVsEntity": 80.0,
+    "usageCount": 25,
     "glowCondition": {
       "fixedValue": false
     },
@@ -32,9 +32,12 @@
       }
     ],
     "immuneToFire": false,
-    "blockDropsTier": "IRON",
+    "blockDropsTier": "DIAMOND",
     "blocksAffected": [],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "AmethystSwordToolInHandTick"
+    }
   }
 }

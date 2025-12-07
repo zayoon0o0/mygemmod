@@ -84,13 +84,13 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 3,
-    "damageValueHelmet": 5,
-    "damageValueBody": 20,
-    "damageValueLeggings": 10,
-    "damageValueBoots": 5,
+    "maxDamage": 1,
+    "damageValueHelmet": 10,
+    "damageValueBody": 40,
+    "damageValueLeggings": 20,
+    "damageValueBoots": 10,
     "enchantability": 30,
-    "toughness": 2.0,
+    "toughness": 3.0,
     "knockbackResistance": 0.1,
     "equipSound": {
       "value": "block.amethyst_block.chime"
