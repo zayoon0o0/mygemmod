@@ -1,0 +1,32 @@
+# --- Build & Output ---
+build/
+*.jar
+*.class
+*.log
+*.tmp
+*.class
+target/
+out/
+
+# --- IDE Files ---
+.vscode/
+.idea/
+*.iml
+.metadata/
+
+# --- Gradle/Maven Specific ---
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
+# (Maybe keep gradle-wrapper.jar if needed for distribution, but often ignored)
+
+# --- Minecraft Specific ---
+.minecraft/
+logs/
+usercache.json
+launcher_profiles.json
+options.txt
+server.properties
+
+# --- OS/Temp Files ---
+.DS_Store
+*.swp

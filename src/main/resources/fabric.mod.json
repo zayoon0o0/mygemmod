@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "mymod",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "name": "myMod",
-  "description": "Adds an End ore called Red gem, also adds amethyst tools and armor!",
+  "description": "Adds an End ore called Red Gem, also adds Amethyst tools and armor!",
   "authors": [
     "Zayoon0o0"
   ],

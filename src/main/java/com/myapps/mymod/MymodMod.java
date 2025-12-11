@@ -34,8 +34,6 @@ public class MymodMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// Start of user code block mod constructor
-		// End of user code block mod constructor
 		LOGGER.info("Initializing MymodMod");
 		MymodModTabs.load();
 		MymodModFeatures.load();
@@ -43,8 +41,6 @@ public class MymodMod implements ModInitializer {
 		MymodModItems.load();
 		MymodModTrades.registerTrades();
 		tick();
-		// Start of user code block mod init
-		// End of user code block mod init
 	}
 
 	// Start of user code block mod methods
