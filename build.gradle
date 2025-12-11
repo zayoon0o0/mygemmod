@@ -3,8 +3,8 @@ plugins {
 }
 
 version = '1.0'
-group = 'com.yourname'
-base.archivesName = 'modid'
+group = 'com.myapps'
+base.archivesName = 'mygemmod'
 actualmodid = 'mymod'
 
 loom {
@@ -35,4 +35,3 @@ java {
     targetCompatibility = JavaVersion.VERSION_21
 }
 
-apply from: 'mcreator.gradle'
