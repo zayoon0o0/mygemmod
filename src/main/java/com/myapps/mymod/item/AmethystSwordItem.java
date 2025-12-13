@@ -16,6 +16,7 @@ public class AmethystSwordItem extends Item {
 	}
 	@Override
 	public void postHurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
+		// applies poison 3 effect for 500 ticks
 		AmethystSwordEntitySwingsItemProcedure.execute(pTarget);
 		super.postHurtEnemy(pStack, pTarget, pAttacker);
 	}

@@ -11,7 +11,7 @@ public class AmethystSwordEntitySwingsItemProcedure {
 			return;
 		if (target instanceof LivingEntity living && !living.level().isClientSide()) {
 			living.addEffect(new MobEffectInstance(MobEffects.POISON, 500, 2));
-			target.setRemainingFireTicks(10);
+			living.level().levelEvent(2001, living.blockPosition(), 0);
 		}
 	}
 }

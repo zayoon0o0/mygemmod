@@ -43,8 +43,6 @@ public class MymodMod implements ModInitializer {
 		tick();
 	}
 
-	// Start of user code block mod methods
-	// End of user code block mod methods
 	private static final Collection<Tuple<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
 
 	public static void queueServerWork(int tick, Runnable action) {
