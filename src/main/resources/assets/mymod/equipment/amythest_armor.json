@@ -2,12 +2,12 @@
   "layers": {
     "humanoid": [
       {
-        "texture": "mymod:amethyst"
+        "texture": "mymod:amethyst_layer_1"
       }
     ],
     "humanoid_leggings": [
       {
-        "texture": "mymod:amethyst"
+        "texture": "mymod:amethyst_layer_2"
       }
     ]
   }

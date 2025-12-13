@@ -10,11 +10,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
-
 import java.util.Map;
 
 public abstract class GemArmorItem extends Item {
-	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(130, Map.of(ArmorType.BOOTS, 15, ArmorType.LEGGINGS, 30, ArmorType.CHESTPLATE, 60, ArmorType.HELMET, 18, ArmorType.BODY, 60), 40,
+	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(130, Map.of(ArmorType.BOOTS, 8, ArmorType.LEGGINGS, 20, ArmorType.CHESTPLATE, 50, ArmorType.HELMET, 18, ArmorType.BODY, 60), 40,
 			BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), 20f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("mymod:gem_armor_repair_items")),
 			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("mymod:gem_armor")));
 

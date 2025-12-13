@@ -2,12 +2,12 @@
   "layers": {
     "humanoid": [
       {
-        "texture": "mymod:ruby"
+        "texture": "mymod:ruby_layer_1"
       }
     ],
     "humanoid_leggings": [
       {
-        "texture": "mymod:ruby"
+        "texture": "mymod:ruby_layer_2"
       }
     ]
   }

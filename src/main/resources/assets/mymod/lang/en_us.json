@@ -6,8 +6,8 @@
   "item.mymod.gem_tools_sword": "Gem Sword",
   "item.mymod.gem_tools_shovel": "Gem Shovel",
   "item.mymod.gem_tools_hoe": "Gem Hoe",
-  "advancements.getting_gem.title": "Got A Gem!",
-  "advancements.getting_gem.descr": "Get A Gem In Minecraft",
+  "advancements.getting_gem.title": "End’s Secret",
+  "advancements.getting_gem.descr": "In the depths of the End, lies the Red Gem.",
   "item.mymod.gem_armor_leggings": "Gem Armor Leggings",
   "item.mymod.gem_armor_helmet": "Gem Armor Helmet",
   "item.mymod.gem_armor_chestplate": "Gem Armor Chestplate",
@@ -22,5 +22,6 @@
   "item.mymod.amethyst_axe": "Amethyst Axe",
   "item.mymod.amethyst_sword": "Amethyst Sword",
   "item.mymod.amethyst_shovel": "Amethyst Shovel",
-  "item.mymod.amethyst_hoe": "Amethyst Hoe"
+  "item.mymod.amethyst_hoe": "Amethyst Hoe",
+  "trim_material.mymod.red_gem": "Red Gem"
 }
