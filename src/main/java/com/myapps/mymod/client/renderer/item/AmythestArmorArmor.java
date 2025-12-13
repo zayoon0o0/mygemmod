@@ -13,29 +13,7 @@ import com.myapps.mymod.init.MymodModArmorModels;
 @Environment(EnvType.CLIENT)
 public class AmythestArmorArmor {
 	public static void clientLoad() {
-		MymodModArmorModels.ARMOR_MODELS.put(MymodModItems.AMYTHEST_ARMOR_HELMET, new MymodModArmorModels.ArmorModel() {
-			@Override
-			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-				return ResourceLocation.parse("mymod:textures/models/armor/amethyst_layer_1.png");
-			}
-		});
-		MymodModArmorModels.ARMOR_MODELS.put(MymodModItems.AMYTHEST_ARMOR_CHESTPLATE, new MymodModArmorModels.ArmorModel() {
-			@Override
-			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-				return ResourceLocation.parse("mymod:textures/models/armor/amethyst_layer_1.png");
-			}
-		});
-		MymodModArmorModels.ARMOR_MODELS.put(MymodModItems.AMYTHEST_ARMOR_LEGGINGS, new MymodModArmorModels.ArmorModel() {
-			@Override
-			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-				return ResourceLocation.parse("mymod:textures/models/armor/amethyst_layer_2.png");
-			}
-		});
-		MymodModArmorModels.ARMOR_MODELS.put(MymodModItems.AMYTHEST_ARMOR_BOOTS, new MymodModArmorModels.ArmorModel() {
-			@Override
-			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
-				return ResourceLocation.parse("mymod:textures/models/armor/amethyst_layer_1.png");
-			}
-		});
+		// Armor models are registered but texture handling is done via equipment JSON
+		// The mixin will use the default texture paths from the equipment asset
 	}
 }
