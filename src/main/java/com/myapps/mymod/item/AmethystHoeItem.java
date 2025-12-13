@@ -12,6 +12,6 @@ public class AmethystHoeItem extends HoeItem {
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, 44, 50f, 0, 30, TagKey.create(Registries.ITEM, ResourceLocation.parse("mymod:amethyst_hoe_repair_items")));
 
 	public AmethystHoeItem(Item.Properties properties) {
-		super(TOOL_MATERIAL, 39f, -3f, properties);
+		super(TOOL_MATERIAL, 5f, -3f, properties);
 	}
 }

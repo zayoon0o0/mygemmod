@@ -2,12 +2,12 @@
   "layers": {
     "humanoid": [
       {
-        "texture": "mymod:gem_armor"
+        "texture": "mymod:ruby"
       }
     ],
     "humanoid_leggings": [
       {
-        "texture": "mymod:gem_armor"
+        "texture": "mymod:ruby"
       }
     ]
   }

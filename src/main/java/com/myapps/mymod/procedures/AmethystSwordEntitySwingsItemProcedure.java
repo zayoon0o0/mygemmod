@@ -1,16 +1,18 @@
 package com.myapps.mymod.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 
 public class AmethystSwordEntitySwingsItemProcedure {
-	public static void execute(Entity target, Entity attacker) {
+	public static void execute(Entity target) {
 		if (target == null)
 			return;
 		if (target instanceof LivingEntity living && !living.level().isClientSide()) {
-			living.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 1));
+			living.addEffect(new MobEffectInstance(MobEffects.POISON, 500, 2));
+			target.setRemainingFireTicks(10);
 		}
 	}
 }
+

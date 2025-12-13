@@ -2,30 +2,55 @@ plugins {
     id 'fabric-loom' version '1.11-SNAPSHOT'
 }
 
-version = '1.0'
-group = 'com.myapps'
-base.archivesName = 'mygemmod'
-actualmodid = 'mymod'
+import groovy.json.JsonSlurper
+
+def fabricJsonFile = file("src/main/resources/fabric.mod.json")
+def fabricJson = new JsonSlurper().parse(fabricJsonFile)
+
+def modId = fabricJson.id ?: "unknownmod"
+def modVersion = fabricJson.version ?: "0.0.1"
+def mcVersionRaw = fabricJson.minecraft ?: "1.21.8"
+def mcVersion = mcVersionRaw.replaceAll("[^0-9.]", "")
+
+
+tasks.remapJar {
+    archiveBaseName.set(modId)
+    archiveVersion.set("${modVersion}-mc${mcVersion}")
+}
+
+tasks.build {
+    dependsOn(tasks.remapJar)
+}
+
+tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 
 loom {
     mixin {
-        defaultRefmapName = actualmodid + ".refmap.json"
+        add sourceSets.main, "mymod.mixins.json"
+        defaultRefmapName = "mymod.refmap.json"
     }
 
-    if (file("src/main/resources/META-INF/mymod.accesswidener").exists())
+    if (file("src/main/resources/META-INF/mymod.accesswidener").exists()) {
         accessWidenerPath = file("src/main/resources/META-INF/mymod.accesswidener")
+    }
 }
+
 
 dependencies {
     minecraft "com.mojang:minecraft:1.21.8"
     modImplementation "net.fabricmc:fabric-loader:0.17.2"
+
     mappings loom.layered() {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-1.21.8:2025.09.14@zip")
     }
-    //Fabric api
+
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.133.4+1.21.8"
 }
+
 
 tasks.withType(JavaCompile).configureEach {
     it.options.release = 21
@@ -36,6 +61,7 @@ java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21
 }
+
 repositories {
     maven {
         name = 'ParchmentMC'

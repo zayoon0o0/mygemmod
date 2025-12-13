@@ -7,8 +7,6 @@
     "RepairItemRecipeMixin",
     "ServerPlayerMixin",
     "PiglinAiMixin",
-    "LivingEntityMixin",
-    "PlayerMixin",
     "ItemStackMixin",
     "BlockItemMixin",
     "BoneMealItemMixin",
