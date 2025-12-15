@@ -12,10 +12,10 @@ darknessEffectScale:1.0
 glintSpeed:0.5
 glintStrength:0.75
 prioritizeChunkUpdates:0
-fullscreen:false
+fullscreen:true
 gamma:0.5
 graphicsMode:0
-guiScale:0
+guiScale:2
 maxFps:260
 inactivityFpsLimit:"afk"
 mipmapLevels:4
@@ -52,7 +52,7 @@ damageTiltStrength:1.0
 highContrast:false
 highContrastBlockOutline:false
 narratorHotkey:true
-resourcePacks:["fabric","mygemmod"]
+resourcePacks:["fabric"]
 incompatibleResourcePacks:[]
 lastServer:localhost:25463
 lang:en_us
@@ -90,7 +90,7 @@ panoramaScrollSpeed:1.0
 telemetryOptInExtra:false
 onboardAccessibility:false
 menuBackgroundBlurriness:5
-startedCleanly:false
+startedCleanly:true
 showNowPlayingToast:false
 musicFrequency:"DEFAULT"
 key_key.attack:key.mouse.left

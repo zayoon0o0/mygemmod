@@ -7,12 +7,9 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class AmethystSwordEntitySwingsItemProcedure {
 	public static void execute(Entity target) {
-		if (target == null)
-			return;
-		if (target instanceof LivingEntity living && !living.level().isClientSide()) {
-			living.addEffect(new MobEffectInstance(MobEffects.POISON, 500, 2));
-			living.level().levelEvent(2001, living.blockPosition(), 0);
-		}
+		if (!(target instanceof LivingEntity living)) return;
+
+		living.addEffect(new MobEffectInstance(MobEffects.POISON, 500, 2));
+		living.level().levelEvent(2001, living.blockPosition(), 0);
 	}
 }
-
