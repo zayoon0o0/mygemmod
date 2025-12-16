@@ -10,6 +10,6 @@ public class AmethystSwordEntitySwingsItemProcedure {
 		if (!(target instanceof LivingEntity living)) return;
 
 		living.addEffect(new MobEffectInstance(MobEffects.POISON, 500, 2));
-		living.level().levelEvent(2001, living.blockPosition(), 0);
 	}
 }
+
