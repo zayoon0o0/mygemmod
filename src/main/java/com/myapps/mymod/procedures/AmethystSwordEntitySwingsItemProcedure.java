@@ -8,8 +8,7 @@ import net.minecraft.world.entity.LivingEntity;
 public class AmethystSwordEntitySwingsItemProcedure {
 	public static void execute(Entity target) {
 		if (!(target instanceof LivingEntity living)) return;
-
-		living.addEffect(new MobEffectInstance(MobEffects.POISON, 500, 2));
+		living.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 12, 1));
 	}
 }
 

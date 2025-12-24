@@ -1,5 +1,6 @@
 package com.myapps.mymod.item;
 
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,8 +27,8 @@ public class AmethystSwordItem extends Item {
 
 	@Override
 	public void postHurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-		// applies poison 3 effect for 500 ticks
 		AmethystSwordEntitySwingsItemProcedure.execute(pTarget);
+		pStack.hurtAndBreak(10, pAttacker, LivingEntity.getSlotForHand(pAttacker.getUsedItemHand()));
 		super.postHurtEnemy(pStack, pTarget, pAttacker);
 	}
 }

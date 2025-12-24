@@ -1,0 +1,9 @@
+{
+  "asset_name": "red_gem",
+  "ingredient": "mymod:red_gem_item",
+  "item_model_index": 0.85,
+  "description": {
+    "color": "#FF0000",
+    "translate": "trim_material.mymod.red_gem"
+  }
+}
