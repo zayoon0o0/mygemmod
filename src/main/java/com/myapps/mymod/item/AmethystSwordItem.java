@@ -1,15 +1,18 @@
 package com.myapps.mymod.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.client.renderer.item.properties.numeric.Cooldown;
+import net.minecraft.world.item.*;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 import com.myapps.mymod.procedures.AmethystSwordEntitySwingsItemProcedure;
+import net.minecraft.world.item.ItemCooldowns;
+import net.minecraft.world.entity.player.Player;
+
+
 
 public class AmethystSwordItem extends Item {
 	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(
@@ -18,7 +21,7 @@ public class AmethystSwordItem extends Item {
 			20f,
 			0,
 			30,
-			TagKey.create(Registries.ITEM, ResourceLocation.parse("mymod:amethyst_sword_repair_items"))
+			TagKey.create(Registries.ITEM, Identifier.parse("mymod:amethyst_sword_repair_items"))
 	);
 
 	public AmethystSwordItem(Item.Properties properties) {
@@ -28,7 +31,9 @@ public class AmethystSwordItem extends Item {
 	@Override
 	public void postHurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
 		AmethystSwordEntitySwingsItemProcedure.execute(pTarget);
-		pStack.hurtAndBreak(10, pAttacker, LivingEntity.getSlotForHand(pAttacker.getUsedItemHand()));
 		super.postHurtEnemy(pStack, pTarget, pAttacker);
+		if (pAttacker instanceof Player player) {
+
+		}
 	}
 }

@@ -5,7 +5,7 @@ import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.tags.TagKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -14,8 +14,8 @@ import java.util.Map;
 
 public abstract class AmythestArmorItem extends Item {
 	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(1, Map.of(ArmorType.BOOTS, 18, ArmorType.LEGGINGS, 20, ArmorType.CHESTPLATE, 55, ArmorType.HELMET, 20, ArmorType.BODY, 40), 30,
-			BuiltInRegistries.SOUND_EVENT.wrapAsHolder(BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("block.amethyst_block.chime"))), 3f, 0.1f,
-			TagKey.create(Registries.ITEM, ResourceLocation.parse("mymod:amythest_armor_repair_items")), ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("mymod:amythest_armor")));
+			BuiltInRegistries.SOUND_EVENT.wrapAsHolder(BuiltInRegistries.SOUND_EVENT.getValue(Identifier.parse("block.amethyst_block.chime"))), 3f, 0.1f,
+			TagKey.create(Registries.ITEM, Identifier.parse("mymod:amythest_armor_repair_items")), ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.parse("mymod:amythest_armor")));
 
 	private AmythestArmorItem(Item.Properties properties) {
 		super(properties);

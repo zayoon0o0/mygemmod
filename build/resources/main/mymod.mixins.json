@@ -13,9 +13,6 @@
     "CommandsMixin",
     "ExperienceOrbMixin"
   ],
-  "client": [
-    "EquipmentLayerRendererMixin"
-  ],
   "injectors": {
     "defaultRequire": 1
   },

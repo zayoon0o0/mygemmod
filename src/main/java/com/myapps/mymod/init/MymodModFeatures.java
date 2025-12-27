@@ -7,7 +7,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraft.world.level.levelgen.feature.OreFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -30,10 +30,10 @@ public class MymodModFeatures {
 
 	private static void register(String registryname, Feature feature, Predicate<BiomeSelectionContext> biomes, GenerationStep.Decoration stage) {
 		register(registryname, feature);
-		BiomeModifications.addFeature(biomes, stage, ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MymodMod.MODID, registryname)));
+		BiomeModifications.addFeature(biomes, stage, ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(MymodMod.MODID, registryname)));
 	}
 
 	private static void register(String registryname, Feature feature) {
-		Registry.register(BuiltInRegistries.FEATURE, ResourceLocation.fromNamespaceAndPath(MymodMod.MODID, registryname), feature);
+		Registry.register(BuiltInRegistries.FEATURE, Identifier.fromNamespaceAndPath(MymodMod.MODID, registryname), feature);
 	}
 }

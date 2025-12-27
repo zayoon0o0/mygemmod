@@ -3,7 +3,7 @@ package com.myapps.mymod.block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 
@@ -17,7 +17,7 @@ public class BlockOfRedGemBlock extends Block {
 		super(properties.strength(2f, 10f).requiresCorrectToolForDrops());
 	}
 
-	public static final Predicate<BiomeSelectionContext> GENERATE_BIOMES = BiomeSelectors.includeByKey(ResourceKey.create(Registries.BIOME, ResourceLocation.parse("mushroom_fields")));
+	public static final Predicate<BiomeSelectionContext> GENERATE_BIOMES = BiomeSelectors.includeByKey(ResourceKey.create(Registries.BIOME, Identifier.parse("mushroom_fields")));
 
 	@Override
 	public int getLightBlock(BlockState state) {

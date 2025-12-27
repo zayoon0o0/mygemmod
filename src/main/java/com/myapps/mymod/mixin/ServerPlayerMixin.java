@@ -1,22 +1,32 @@
 package com.myapps.mymod.mixin;
 
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.Mixin;
-
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Inventory;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
 
 @Mixin(ServerPlayer.class)
 public abstract class ServerPlayerMixin {
-	@Inject(method = "Lnet/minecraft/server/level/ServerPlayer;drop(Z)Z", at = @At("HEAD"), cancellable = true)
-	public void drop(boolean dropStack, CallbackInfoReturnable<Boolean> cir) {
+	@Inject(
+			method = "drop(Z)V",
+			at = @At("HEAD"),
+			cancellable = true
+	)
+	private void onDrop(boolean dropStack, CallbackInfo ci) {
 		ServerPlayer self = (ServerPlayer) (Object) this;
 		Inventory inventory = self.getInventory();
-		ItemStack itemstack = inventory.removeFromSelected(dropStack);
-		self.containerMenu.findSlot(inventory, inventory.getSelectedSlot()).ifPresent(p_401732_ -> self.containerMenu.setRemoteSlot(p_401732_, inventory.getSelectedItem()));
-		cir.setReturnValue(self.drop(itemstack, false, true) != null);
+		ItemStack itemStack = inventory.removeFromSelected(dropStack);
+		self.containerMenu
+				.findSlot(inventory, inventory.getSelectedSlot())
+				.ifPresent(slot ->
+						self.containerMenu.setRemoteSlot(slot, inventory.getSelectedItem())
+				);
+		if (!itemStack.isEmpty()) {
+			self.drop(itemStack, false, true);
+		}
+		ci.cancel();
 	}
 }

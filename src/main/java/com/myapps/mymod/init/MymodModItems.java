@@ -8,7 +8,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 
@@ -18,6 +18,7 @@ import com.myapps.mymod.item.*;
 import com.myapps.mymod.MymodMod;
 
 public class MymodModItems {
+	public static Item GEM_SPEAR;
 	public static Item RED_GEM;
 	public static Item RED_GEM_ITEM;
 	public static Item GEM_TOOLS_PICKAXE;
@@ -43,6 +44,7 @@ public class MymodModItems {
 	public static void load() {
 		RED_GEM = block(MymodModBlocks.RED_GEM, "red_gem", new Item.Properties().rarity(Rarity.RARE));
 		RED_GEM_ITEM = register("red_gem_item", RedGemItemItem::new);
+		GEM_SPEAR = register("red_gem_spear", GemSpearItem::new);
 		GEM_TOOLS_PICKAXE = register("gem_tools_pickaxe", Gem_toolsPickaxeItem::new);
 		GEM_TOOLS_AXE = register("gem_tools_axe", Gem_toolsAxeItem::new);
 		GEM_TOOLS_SWORD = register("gem_tools_sword", Gem_toolsSwordItem::new);
@@ -67,7 +69,7 @@ public class MymodModItems {
 	// Start of user code block custom items
 	// End of user code block custom items
 	private static <I extends Item> I register(String name, Function<Item.Properties, ? extends I> supplier) {
-		return (I) Items.registerItem(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MymodMod.MODID, name)), (Function<Item.Properties, Item>) supplier);
+		return (I) Items.registerItem(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MymodMod.MODID, name)), (Function<Item.Properties, Item>) supplier);
 	}
 
 	private static Item block(Block block, String name) {
@@ -75,6 +77,6 @@ public class MymodModItems {
 	}
 
 	private static Item block(Block block, String name, Item.Properties properties) {
-		return Items.registerItem(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MymodMod.MODID, name)), prop -> new BlockItem(block, prop), properties);
+		return Items.registerItem(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MymodMod.MODID, name)), prop -> new BlockItem(block, prop), properties);
 	}
 }

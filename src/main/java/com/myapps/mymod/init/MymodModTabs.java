@@ -6,7 +6,7 @@ package com.myapps.mymod.init;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
@@ -19,7 +19,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import com.myapps.mymod.MymodMod;
 
 public class MymodModTabs {
-	public static ResourceKey<CreativeModeTab> TAB_RED_GEM_TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MymodMod.MODID, "red_gem_tab"));
+	public static ResourceKey<CreativeModeTab> TAB_RED_GEM_TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(MymodMod.MODID, "red_gem_tab"));
 
 	public static void load() {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_RED_GEM_TAB,
@@ -40,6 +40,7 @@ public class MymodModTabs {
 					tabData.accept(MymodModItems.AMETHYST_PICKAXE);
 					tabData.accept(MymodModItems.AMETHYST_HOE);
 					tabData.accept(MymodModItems.AMETHYST_SWORD);
+					tabData.accept(MymodModItems.GEM_SPEAR);
 
 				}).build());
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(tabData -> {
