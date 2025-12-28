@@ -40,6 +40,7 @@ public class MymodModItems {
 	public static Item AMETHYST_SWORD;
 	public static Item AMETHYST_SHOVEL;
 	public static Item AMETHYST_HOE;
+	public static Item AMETHYST_SPEAR;
 
 	public static void load() {
 		RED_GEM = block(MymodModBlocks.RED_GEM, "red_gem", new Item.Properties().rarity(Rarity.RARE));
@@ -48,6 +49,7 @@ public class MymodModItems {
 		GEM_TOOLS_PICKAXE = register("gem_tools_pickaxe", Gem_toolsPickaxeItem::new);
 		GEM_TOOLS_AXE = register("gem_tools_axe", Gem_toolsAxeItem::new);
 		GEM_TOOLS_SWORD = register("gem_tools_sword", Gem_toolsSwordItem::new);
+		AMETHYST_SPEAR = register("amethyst_spear", AmethystSpearItem::new);
 		GEM_TOOLS_SHOVEL = register("gem_tools_shovel", Gem_toolsShovelItem::new);
 		GEM_TOOLS_HOE = register("gem_tools_hoe", Gem_toolsHoeItem::new);
 		GEM_ARMOR_HELMET = register("gem_armor_helmet", GemArmorItem.Helmet::new);

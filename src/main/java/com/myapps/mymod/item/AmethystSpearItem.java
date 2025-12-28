@@ -10,20 +10,20 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ToolMaterial;
 
 
-public class GemSpearItem extends Item {
+public class AmethystSpearItem extends Item {
     private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            5000,
+            20,
             5f,
-            10,
+            14,
             30,
-            TagKey.create(Registries.ITEM, Identifier.parse("mymod:gem_tools_pickaxe_repair_items"))
+            TagKey.create(Registries.ITEM, Identifier.parse("mymod:amethyst_sword_repair_items"))
     );
-    public GemSpearItem(Item.Properties properties) {
-        super(properties.spear(TOOL_MATERIAL, 0.5f, 10,0.5f,3,4,4,2,7f,0.5f));
+    public AmethystSpearItem(Item.Properties properties) {
+        super(properties.spear(TOOL_MATERIAL, 0.5f, 12,0,3,4,4,2,10f,0.3f));
     }
     @Override
     public void postHurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
-            super.postHurtEnemy(pStack, pTarget, pAttacker);
+        super.postHurtEnemy(pStack, pTarget, pAttacker);
     }
 }

@@ -45,6 +45,7 @@ public class MymodModTabs {
 					tabData.accept(MymodModItems.AMYTHEST_ARMOR_CHESTPLATE);
 					tabData.accept(MymodModItems.AMYTHEST_ARMOR_LEGGINGS);
 					tabData.accept(MymodModItems.AMYTHEST_ARMOR_BOOTS);
+					tabData.accept(MymodModItems.AMETHYST_SPEAR);
 
 				}).build());
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(tabData -> {
