@@ -32,8 +32,5 @@ public class AmethystSwordItem extends Item {
 	public void postHurtEnemy(ItemStack pStack, LivingEntity pTarget, LivingEntity pAttacker) {
 		AmethystSwordEntitySwingsItemProcedure.execute(pTarget);
 		super.postHurtEnemy(pStack, pTarget, pAttacker);
-		if (pAttacker instanceof Player player) {
-
-		}
 	}
 }

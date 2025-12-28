@@ -41,6 +41,10 @@ public class MymodModTabs {
 					tabData.accept(MymodModItems.AMETHYST_HOE);
 					tabData.accept(MymodModItems.AMETHYST_SWORD);
 					tabData.accept(MymodModItems.GEM_SPEAR);
+					tabData.accept(MymodModItems.AMYTHEST_ARMOR_HELMET);
+					tabData.accept(MymodModItems.AMYTHEST_ARMOR_CHESTPLATE);
+					tabData.accept(MymodModItems.AMYTHEST_ARMOR_LEGGINGS);
+					tabData.accept(MymodModItems.AMYTHEST_ARMOR_BOOTS);
 
 				}).build());
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(tabData -> {
@@ -71,6 +75,7 @@ public class MymodModTabs {
 			tabData.accept(MymodModItems.AMYTHEST_ARMOR_LEGGINGS);
 			tabData.accept(MymodModItems.AMYTHEST_ARMOR_BOOTS);
 			tabData.accept(MymodModItems.AMETHYST_SWORD);
+			tabData.accept(MymodModItems.GEM_SPEAR);
 		});
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(tabData -> {
 			tabData.accept(MymodModBlocks.BLOCK_OF_RED_GEM.asItem());

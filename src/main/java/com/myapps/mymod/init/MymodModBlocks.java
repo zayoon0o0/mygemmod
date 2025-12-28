@@ -25,8 +25,6 @@ public class MymodModBlocks {
 		BLOCK_OF_RED_GEM = register("block_of_red_gem", BlockOfRedGemBlock::new);
 	}
 
-	// Start of user code block custom blocks
-	// End of user code block custom blocks
 	private static <B extends Block> B register(String name, Function<BlockBehaviour.Properties, B> supplier) {
 		return (B) Blocks.register(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MymodMod.MODID, name)), (Function<BlockBehaviour.Properties, Block>) supplier, BlockBehaviour.Properties.of());
 	}
