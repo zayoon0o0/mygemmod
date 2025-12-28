@@ -9,7 +9,7 @@ def fabricJson = new JsonSlurper().parse(fabricJsonFile)
 
 def modId = fabricJson.id ?: "unknownmod"
 def modVersion = fabricJson.version ?: "0.0.1"
-def mcVersionRaw = fabricJson.minecraft ?: "1.21.8"
+def mcVersionRaw = fabricJson.minecraft ?: "1.21.11"
 def mcVersion = mcVersionRaw.replaceAll("[^0-9.]", "")
 
 
