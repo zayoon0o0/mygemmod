@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "id": "mymod:block_of_red_gem"
+    },
+    "title": {
+      "translate": "advancements.getting_gem_block.title"
+    },
+    "description": {
+      "translate": "advancements.getting_gem_block.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "getting_gem_block_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mymod:block_of_red_gem"
+            ],
+            "count": {
+              "min": 1,
+              "max": 900
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "mymod:red_gem_item"
+}

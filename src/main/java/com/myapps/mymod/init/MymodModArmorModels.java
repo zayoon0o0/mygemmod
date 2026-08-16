@@ -36,7 +36,6 @@ public class MymodModArmorModels {
 	}
 
 	public static void clientLoad() {
-		GemArmorArmor.clientLoad();
 		AmythestArmorArmor.clientLoad();
 	}
 }
