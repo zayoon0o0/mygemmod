@@ -1,5 +1,6 @@
 package com.myapps.mymod.init;
 
+import com.myapps.mymod.client.renderer.item.GemArmorArmor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.resources.Identifier;
@@ -13,9 +14,6 @@ import net.fabricmc.api.EnvType;
 import java.util.Map;
 
 import it.unimi.dsi.fastutil.objects.Reference2ObjectOpenHashMap;
-
-import com.myapps.mymod.client.renderer.item.GemArmorArmor;
-import com.myapps.mymod.client.renderer.item.AmythestArmorArmor;
 
 @Environment(EnvType.CLIENT)
 public class MymodModArmorModels {
@@ -36,6 +34,6 @@ public class MymodModArmorModels {
 	}
 
 	public static void clientLoad() {
-		AmythestArmorArmor.clientLoad();
+		GemArmorArmor.clientLoad();
 	}
 }
