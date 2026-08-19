@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mymod:gem_armor_helmet",
-    "mymod:amythest_armor_helmet"
+    "mymod:gem_armor_helmet"
   ]
 }

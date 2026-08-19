@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mymod:red_gem_spear",
-    "mymod:amethyst_spear"
+    "mymod:red_gem_spear"
   ]
 }

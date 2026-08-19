@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.15.0-alpha.6'
+    id 'net.fabricmc.fabric-loom' version '1.15-SNAPSHOT'
 }
 
 import groovy.json.JsonSlurper
@@ -9,21 +9,17 @@ def fabricJson = new JsonSlurper().parse(fabricJsonFile)
 
 def modId = fabricJson.id ?: "unknownmod"
 def modVersion = fabricJson.version ?: "0.0.1"
-def mcVersionRaw = fabricJson.minecraft ?: "1.21.11"
+def mcVersionRaw = fabricJson.minecraft ?: "26.1"
 def mcVersion = mcVersionRaw.replaceAll("[^0-9.]", "")
 
 
-tasks.remapJar {
+tasks.jar {
     archiveBaseName.set(modId)
     archiveVersion.set("${modVersion}-mc${mcVersion}")
 }
 
 tasks.build {
-    dependsOn(tasks.remapJar)
-}
-
-tasks.jar {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    dependsOn(tasks.jar)
 }
 
 
@@ -40,29 +36,20 @@ loom {
 
 
 dependencies {
-    minecraft "com.mojang:minecraft:1.21.11"
-    modImplementation "net.fabricmc:fabric-loader:0.17.3"
-    mappings loom.layered() {
-        officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-1.21.11:2025.12.20@zip")
-    }
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.136.2+1.21.11"
+    minecraft "com.mojang:minecraft:26.1"
+    implementation "net.fabricmc:fabric-loader:0.19.3"
+    implementation "net.fabricmc.fabric-api:fabric-api:0.144.1+26.1"
 }
 
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 21
+    it.options.release = 25
 }
 
 java {
     withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
-repositories {
-    maven {
-        name = 'ParchmentMC'
-        url = 'https://maven.parchmentmc.org'
-    }
-}
+

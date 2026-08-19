@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mymod:item/gemchest"
+    "layer0": "mymod:item/red_gem_chestplate"
   }
 }

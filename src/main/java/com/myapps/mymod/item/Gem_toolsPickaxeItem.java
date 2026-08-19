@@ -8,9 +8,9 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 
 public class Gem_toolsPickaxeItem extends Item {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 5000, 30f, 0, 14, TagKey.create(Registries.ITEM, Identifier.parse("mymod:gem_tools_pickaxe_repair_items")));
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 3000, 12f, 0, 14, TagKey.create(Registries.ITEM, Identifier.parse("mymod:gem_tools_pickaxe_repair_items")));
 
 	public Gem_toolsPickaxeItem(Item.Properties properties) {
-		super(properties.pickaxe(TOOL_MATERIAL, 3f, -1f));
+		super(properties.pickaxe(TOOL_MATERIAL, 6f, -2.8f));
 	}
 }

@@ -22,7 +22,7 @@ public class RedGemBlock extends Block {
 			ResourceKey.create(Registries.BIOME, Identifier.parse("end_midlands")));
 
 	@Override
-	public int getLightBlock(BlockState state) {
+	public int getLightDampening(BlockState state) {
 		return 15;
 	}
 }

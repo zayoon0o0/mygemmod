@@ -1,11 +1,7 @@
-/*
- *    MCreator note: This file will be REGENERATED on each build.
- */
 package com.myapps.mymod.init;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.Identifier;
@@ -16,6 +12,8 @@ import java.util.function.Function;
 
 import com.myapps.mymod.item.*;
 import com.myapps.mymod.MymodMod;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 public class MymodModItems {
 	public static Item GEM_SPEAR;
@@ -52,14 +50,29 @@ public class MymodModItems {
 	// Start of user code block custom items
 	// End of user code block custom items
 	private static <I extends Item> I register(String name, Function<Item.Properties, ? extends I> supplier) {
-		return (I) Items.registerItem(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MymodMod.MODID, name)), (Function<Item.Properties, Item>) supplier);
-	}
+		ResourceKey<Item> itemKey = ResourceKey.create(
+				Registries.ITEM,
+				Identifier.fromNamespaceAndPath(MymodMod.MODID, name)
+		);
 
+		I item = (I) supplier.apply(new Item.Properties().setId(itemKey));
+		Registry.register(BuiltInRegistries.ITEM, itemKey, item);
+
+		return item;
+	}
 	private static Item block(Block block, String name) {
 		return block(block, name, new Item.Properties());
 	}
 
 	private static Item block(Block block, String name, Item.Properties properties) {
-		return Items.registerItem(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MymodMod.MODID, name)), prop -> new BlockItem(block, prop), properties);
+		ResourceKey<Item> itemKey = ResourceKey.create(
+				Registries.ITEM,
+				Identifier.fromNamespaceAndPath(MymodMod.MODID, name)
+		);
+
+		Item item = new BlockItem(block, properties.setId(itemKey));
+		Registry.register(BuiltInRegistries.ITEM, itemKey, item);
+
+		return item;
 	}
 }

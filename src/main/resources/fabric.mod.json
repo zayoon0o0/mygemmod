@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "mygemmod",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "name": "myMod",
   "description": "Adds an End ore called Red Gem, also adds Amethyst tools and armor!",
   "authors": [
@@ -22,10 +22,13 @@
       "com.myapps.mymod.MymodModClient"
     ]
   },
+  "mixins": [
+    "mymod.mixins.json"
+  ],
   "depends": {
-    "fabricloader": ">=0.17.3",
-    "minecraft": ">=1.21.11",
-    "java": ">=21",
+    "fabricloader": ">=0.19.3",
+    "minecraft": ">=26.1.2",
+    "java": ">=25",
     "fabric-api": "*"
   }
 }

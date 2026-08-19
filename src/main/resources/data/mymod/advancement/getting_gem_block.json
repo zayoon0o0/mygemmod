@@ -33,7 +33,8 @@
     }
   },
   "rewards": {
-    "experience": 1000
+    "experience": 0,
+    "sound": "minecraft:ambient.cave"
   },
   "parent": "mymod:red_gem_item"
 }

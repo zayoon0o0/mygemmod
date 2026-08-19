@@ -9,9 +9,9 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.core.registries.Registries;
 
 public class Gem_toolsShovelItem extends ShovelItem {
-	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 5000, 300f, 0, 14, TagKey.create(Registries.ITEM, Identifier.parse("mymod:gem_tools_shovel_repair_items")));
+	private static final ToolMaterial TOOL_MATERIAL = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 3000, 12f, 0, 14, TagKey.create(Registries.ITEM, Identifier.parse("mymod:gem_tools_shovel_repair_items")));
 
 	public Gem_toolsShovelItem(Item.Properties properties) {
-		super(TOOL_MATERIAL, 3f, -2f, properties);
+		super(TOOL_MATERIAL, 7f, -2.8f, properties);
 	}
 }

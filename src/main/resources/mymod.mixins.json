@@ -4,14 +4,6 @@
   "compatibilityLevel": "JAVA_21",
   "refmap": "mymod.refmap.json",
   "mixins": [
-    "RepairItemRecipeMixin",
-    "ServerPlayerMixin",
-    "PiglinAiMixin",
-    "ItemStackMixin",
-    "BlockItemMixin",
-    "BoneMealItemMixin",
-    "CommandsMixin",
-    "ExperienceOrbMixin"
   ],
   "injectors": {
     "defaultRequire": 1

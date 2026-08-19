@@ -10,12 +10,12 @@
   "advancements.getting_gem.descr": "In the depths of the End, lies the Mystical Red Gem.",
   "advancements.getting_gem_block.title": "Rich... Maybe too rich.",
   "advancements.getting_gem_block.descr": "It's too late...",
-  "item.mymod.gem_armor_leggings": "Gem Armor Leggings",
+  "item.mymod.gem_armor_leggings": "Gem Leggings",
   "item.mymod.red_gem_spear": "Gem Spear",
-  "item.mymod.gem_armor_helmet": "Gem Armor Helmet",
-  "item.mymod.gem_armor_chestplate": "Gem Armor Chestplate",
+  "item.mymod.gem_armor_helmet": "Gem Helmet",
+  "item.mymod.gem_armor_chestplate": "Gem Chestplate",
   "item.mymod.gem_armor_boots": "Gem Armor Boots",
   "item.mymod.block_of_red_gem": "Block Of Red Gem",
-  "item_group.mymod.red_gem_tab": "My Red Gem Mod Items",
+  "item_group.mymod.red_gem_tab": "Red Gem",
   "trim_material.mymod.red_gem": "Red Gem"
 }

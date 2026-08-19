@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
-    "up": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
-    "north": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
-    "east": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
-    "south": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
-    "west": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am",
-    "particle": "mymod:block/chatgpt_image_dec_5_2025_11_25_53_am"
+    "down": "mymod:block/redgemblock.png",
+    "up": "mymod:block/redgemblock.png",
+    "north": "mymod:block/redgemblock.png",
+    "east": "mymod:block/redgemblock.png",
+    "south": "mymod:block/redgemblock.png",
+    "west": "mymod:block/redgemblock.png",
+    "particle": "mymod:block/redgemblock.png"
   },
   "render_type": "solid"
 }

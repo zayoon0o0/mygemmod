@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class RedGemItemItem extends Item {
 	public RedGemItemItem(Item.Properties properties) {
-		super(properties.rarity(Rarity.RARE).fireResistant());
+		super(properties.rarity(Rarity.EPIC).fireResistant());
 	}
 }

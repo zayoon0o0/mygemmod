@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.util.Tuple;
 
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -33,7 +32,7 @@ public class MymodMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Initializing MymodMod");
+		LOGGER.info("BETTER GET LOOKIN IN THE END");
 		MymodModTabs.load();
 		MymodModFeatures.load();
 		MymodModBlocks.load();
@@ -41,21 +40,34 @@ public class MymodMod implements ModInitializer {
 		tick();
 	}
 
-	private static final Collection<Tuple<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
+	private static class WorkEntry {
+		private final Runnable action;
+		private int ticks;
+
+		WorkEntry(Runnable action, int ticks) {
+			this.action = action;
+			this.ticks = ticks;
+		}
+	}
+
+	private static final Collection<WorkEntry> workQueue = new ConcurrentLinkedQueue<>();
 
 	public static void queueServerWork(int tick, Runnable action) {
-		workQueue.add(new Tuple<>(action, tick));
+		workQueue.add(new WorkEntry(action, tick));
 	}
 
 	private void tick() {
 		ServerTickEvents.END_SERVER_TICK.register((server) -> {
-			List<Tuple<Runnable, Integer>> actions = new ArrayList<>();
+			List<WorkEntry> actions = new ArrayList<>();
+
 			workQueue.forEach(work -> {
-				work.setB(work.getB() - 1);
-				if (work.getB() == 0)
+				work.ticks--;
+
+				if (work.ticks == 0)
 					actions.add(work);
 			});
-			actions.forEach(e -> e.getA().run());
+
+			actions.forEach(work -> work.action.run());
 			workQueue.removeAll(actions);
 		});
 	}
@@ -69,9 +81,22 @@ public class MymodMod implements ModInitializer {
 			try {
 				if (minecraft == null || playerHandle == null) {
 					Class<?> minecraftClass = Class.forName("net.minecraft.client.Minecraft");
-					minecraft = MethodHandles.publicLookup().findStatic(minecraftClass, "getInstance", MethodType.methodType(minecraftClass)).invoke();
-					playerHandle = MethodHandles.publicLookup().findGetter(minecraftClass, "player", Class.forName("net.minecraft.client.player.LocalPlayer"));
+					minecraft = MethodHandles.publicLookup()
+							.findStatic(
+									minecraftClass,
+									"getInstance",
+									MethodType.methodType(minecraftClass)
+							)
+							.invoke();
+
+					playerHandle = MethodHandles.publicLookup()
+							.findGetter(
+									minecraftClass,
+									"player",
+									Class.forName("net.minecraft.client.player.LocalPlayer")
+							);
 				}
+
 				return (Player) playerHandle.invoke(minecraft);
 			} catch (Throwable e) {
 				LOGGER.error("Failed to get client player", e);

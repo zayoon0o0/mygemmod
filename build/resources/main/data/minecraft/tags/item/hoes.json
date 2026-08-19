@@ -1,7 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "mymod:gem_tools_hoe",
-    "mymod:amethyst_hoe"
-  ]
-}
