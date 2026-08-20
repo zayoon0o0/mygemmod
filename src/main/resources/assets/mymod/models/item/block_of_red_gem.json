@@ -1,5 +1,5 @@
 {
-  "parent": "mymod:block/redgemblock",
+  "parent": "mymod:block/block_of_red_gem",
   "display": {
     "thirdperson": {
       "rotation": [
