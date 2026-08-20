@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "mymod:block/3616303537",
-    "up": "mymod:block/3616303537",
-    "north": "mymod:block/3616303537",
-    "east": "mymod:block/3616303537",
-    "south": "mymod:block/3616303537",
-    "west": "mymod:block/3616303537",
-    "particle": "mymod:block/3616303537"
+    "down": "mymod:block/1284",
+    "up": "mymod:block/1284",
+    "north": "mymod:block/1284",
+    "east": "mymod:block/1284",
+    "south": "mymod:block/1284",
+    "west": "mymod:block/1284",
+    "particle": "mymod:block/1284"
   },
   "render_type": "solid"
 }

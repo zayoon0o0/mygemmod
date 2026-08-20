@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "mymod:block/redgemblock.png",
-    "up": "mymod:block/redgemblock.png",
-    "north": "mymod:block/redgemblock.png",
-    "east": "mymod:block/redgemblock.png",
-    "south": "mymod:block/redgemblock.png",
-    "west": "mymod:block/redgemblock.png",
-    "particle": "mymod:block/redgemblock.png"
+    "down": "mymod:block/redgemblock",
+    "up": "mymod:block/redgemblock",
+    "north": "mymod:block/redgemblock",
+    "east": "mymod:block/redgemblock",
+    "south": "mymod:block/redgemblock",
+    "west": "mymod:block/redgemblock",
+    "particle": "mymod:block/redgemblock"
   },
   "render_type": "solid"
 }
