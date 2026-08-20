@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "mymod:item/redgemitem"
+    "model": "mymod:item/red_gem_item"
   }
 }
