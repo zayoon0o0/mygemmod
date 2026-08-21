@@ -17,8 +17,6 @@ public class BlockOfRedGemBlock extends Block {
 		super(properties.strength(2f, 10f).requiresCorrectToolForDrops());
 	}
 
-	public static final Predicate<BiomeSelectionContext> GENERATE_BIOMES = BiomeSelectors.includeByKey(ResourceKey.create(Registries.BIOME, Identifier.parse("mushroom_fields")));
-
 	@Override
 	public int getLightDampening(BlockState state) {
 		return 15;

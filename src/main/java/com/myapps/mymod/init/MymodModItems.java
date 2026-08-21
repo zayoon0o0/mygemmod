@@ -32,7 +32,7 @@ public class MymodModItems {
 
 
 	public static void load() {
-		RED_GEM = block(MymodModBlocks.RED_GEM, "red_gem", new Item.Properties().rarity(Rarity.RARE));
+		RED_GEM = block(MymodModBlocks.RED_GEM, "red_gem", new Item.Properties().rarity(Rarity.EPIC));
 		RED_GEM_ITEM = register("red_gem_item", RedGemItemItem::new);
 		GEM_SPEAR = register("red_gem_spear", GemSpearItem::new);
 		GEM_TOOLS_PICKAXE = register("gem_tools_pickaxe", Gem_toolsPickaxeItem::new);
