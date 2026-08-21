@@ -30,3 +30,4 @@ server.properties
 # --- OS/Temp Files ---
 .DS_Store
 *.swp
+/.ollamassist/
